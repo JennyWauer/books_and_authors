@@ -1,0 +1,24 @@
+.add-book {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-book h1 {
+    text-align: center;
+}
+
+.add-book form {
+    display: flex;
+}
+
+.add-book label {
+    text-align: left;
+    display: block;
+}
+
+.add-book input {
+    text-align: left;
+    display: block;
+    float: right;
+}
