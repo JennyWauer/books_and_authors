@@ -18,10 +18,10 @@
     </ul>
     <form action="/add_author_to_book" method="POST">
         {% csrf_token %}
-        <select>
+        <select name="author-id">
             <option>-select author-</option>
             {% for author in authors %}
-            <option name="author-id" value="{{ author.id }}">{{ author.first_name}} {{ author.last_name }}</option>
+            <option value="{{ author.id }}">{{ author.first_name}} {{ author.last_name }}</option>
             {% endfor %}
         </select>
         <input type="hidden" name="book-id" value="{{ book.id }}">
