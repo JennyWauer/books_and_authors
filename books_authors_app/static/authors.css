@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    margin: 1em;
+}
+
+.add-author {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-author h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.add-author div {
+    display: block;
+    padding: 0.25em;
+}
+
+.add-author input {
+    display: inline-block;
+    float: right;
+}
+
+.author-list {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: auto;
+    margin: auto;
+    border: 0.15em solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.25em;
+    text-align: left;
+    border-left: 0.15em solid black;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+table td:first-child, table th:first-child {
+    border-left: none;
+}
+
+table td:last-child, table th:last-child {
+    border-right: none;
+}

@@ -33,3 +33,10 @@ def add_author_to_book(request):
         author_to_add = Author.objects.get(id=request.POST['author-id'])
         book_for_author.authors.add(author_to_add)
         return redirect('/')
+
+def authors(request):
+    context = {
+        "authors": Author.objects.all(),
+        "books": Book.objects.all()
+    }
+    return render(request, 'authors.html', context)
