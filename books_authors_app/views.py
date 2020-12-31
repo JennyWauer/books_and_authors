@@ -47,3 +47,12 @@ def add_author(request):
     if request.method == 'POST':
         Author.objects.create(first_name=request.POST['first_name'],last_name=request.POST['last_name'],notes=request.POST['notes'])
         return redirect('/authors')
+
+def author_details(request, number):
+    author = Author.objects.get(id=number)
+    context = {
+        "authors": Author.objects.all(),
+        "author": Author.objects.get(id=number),
+        "author_books": author.books.all()
+    }
+    return render(request, 'author_details.html', context)
