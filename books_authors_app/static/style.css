@@ -43,10 +43,9 @@ table {
 }
 
 th, td {
-    padding: 0.15em;
+    padding: 0.25em;
     text-align: left;
     border-left: 0.15em solid black;
-    /* border-right: 0.15em solid black; */
 }
 
 tbody tr:nth-child(odd) {

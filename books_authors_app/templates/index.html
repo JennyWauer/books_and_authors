@@ -10,7 +10,8 @@
 <body>
     <div class="add-book">
         <h1>Add Book</h1>
-        <form>
+        <form action="/add_book" method="POST">
+            {% csrf_token %}
             <div>
                 <label for="title">Title</label>
                 <input type="text" name="title">
@@ -34,7 +35,7 @@
                 <tr>
                     <td>{{ book.id }}</td>
                     <td>{{ book.title }}</td>
-                    <td><a>View</a></td>
+                    <td><a href="books/{{ book.id }}">View</a></td>
                 </tr>
             {% endfor %}
         </table>
