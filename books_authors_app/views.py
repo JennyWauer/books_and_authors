@@ -25,12 +25,11 @@ def book_details(request, number):
     }
     return render(request, 'book_details.html', context)
 
-def add_author_to_book(request, book_number):
+def add_author_to_book(request):
     if request.method == 'GET':
         return redirect('/')
     if request.method == 'POST':
-        # book_for_author = Book.objects.get(id=request.POST['book-id'])
-        # author_to_add = Author.objects.get(id=request.POST['author-id'])
-        # book_for_author.authors.add(author_to_add)
-        print("hello")
-        return redirect('books/<number>')
+        book_for_author = Book.objects.get(id=request.POST['book-id'])
+        author_to_add = Author.objects.get(id=request.POST['author-id'])
+        book_for_author.authors.add(author_to_add)
+        return redirect('/')
